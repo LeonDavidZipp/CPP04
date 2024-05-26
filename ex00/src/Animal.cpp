@@ -8,6 +8,7 @@ Animal::Animal(const std::string& type) {
     this->_type = type;
     std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
+
 Animal::Animal(const Animal& other) {
     std::string otherType = other.getType()
     this->_type = otherType;
