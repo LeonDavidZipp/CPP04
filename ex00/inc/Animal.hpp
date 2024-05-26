@@ -15,7 +15,7 @@ class Animal {
         std::string getType();
         void setType(std::string type);
 
-        void makeSound();
+        void makeSound() const;
 
     protected:
         std::string _type;
