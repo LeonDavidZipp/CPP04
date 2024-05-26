@@ -4,7 +4,7 @@
 # include "Animal.hpp"
 # include <iostream>
 
-class Cat {
+class Cat : virtual public Animal {
     public:
         Cat();
         Cat(const std::string& type);
