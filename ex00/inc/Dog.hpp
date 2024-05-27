@@ -13,9 +13,6 @@ class Dog : virtual public Animal {
 
         Dog& operator=(const Dog& other);
 
-        std::string getType();
-        void setType(std::string type);
-
         void makeSound();
 
     protected:

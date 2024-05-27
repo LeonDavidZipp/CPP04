@@ -4,12 +4,13 @@ Animal::Animal() {
     this->_type = "Default Animal";
     std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
+
 Animal::Animal(const std::string& type) {
     this->_type = type;
     std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
 
-Animal::Animal(Animal& other) {
+Animal::Animal(const Animal& other) {
     std::string otherType = other.getType();
     this->_type = otherType;
     std::cout << "Animal of type\t" << this->_type << " created from\t" << otherType << std::endl;
@@ -28,9 +29,10 @@ Animal& Animal::operator=(const Animal& other) {
     return *this;
 }
 
-std::string Animal::getType() {
+std::string Animal::getType() const {
     return this->_type;
 }
+
 void Animal::setType(std::string type) {
     this->_type = type;
 }
