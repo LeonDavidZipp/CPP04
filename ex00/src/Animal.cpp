@@ -9,8 +9,8 @@ Animal::Animal(const std::string& type) {
     std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
 
-Animal::Animal(const Animal& other) {
-    std::string otherType = other.getType()
+Animal::Animal(Animal& other) {
+    std::string otherType = other.getType();
     this->_type = otherType;
     std::cout << "Animal of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
@@ -20,8 +20,9 @@ Animal::~Animal() {
 }
 
 Animal& Animal::operator=(const Animal& other) {
-    if (this != other) {
-        this->_type = other.getType();
+    std::string otherType = other.getType();
+    if (this != &other) {
+        this->_type = otherType;
     }
     std::cout << "Animal of type\t" << this->_type << " created from\t" << otherType << std::endl;
     return *this;
