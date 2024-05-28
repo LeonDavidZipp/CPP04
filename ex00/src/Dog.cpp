@@ -16,7 +16,7 @@ Dog::Dog(const Dog& other) : Animal(other) {
     std::cout << "Dog of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 
-Dog::~Dog() : ~Animal() {
+Dog::~Dog() {
     std::cout << "Dog of type\t" << this->_type << " destroyed." << std::endl;
 }
 
@@ -29,6 +29,6 @@ Dog& Dog::operator=(const Dog& other) {
     return *this;
 }
 
-void Dog::makeSound() {
+void Dog::makeSound() const {
     std::cout << "Dog noises..." << std::endl;
 }

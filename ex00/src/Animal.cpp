@@ -22,9 +22,11 @@ Animal::~Animal() {
 
 Animal& Animal::operator=(const Animal& other) {
     std::string otherType = other.getType();
+
     if (this != &other) {
         this->_type = otherType;
     }
+
     std::cout << "Animal of type\t" << this->_type << " created from\t" << otherType << std::endl;
     return *this;
 }

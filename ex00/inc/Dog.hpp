@@ -4,7 +4,7 @@
 # include "Animal.hpp"
 # include <iostream>
 
-class Dog : virtual public Animal {
+class Dog : public Animal {
     public:
         Dog();
         Dog(const std::string& type);
@@ -13,7 +13,7 @@ class Dog : virtual public Animal {
 
         Dog& operator=(const Dog& other);
 
-        void makeSound();
+        void makeSound() const;
 
     protected:
         std::string _type;

@@ -16,12 +16,12 @@ Cat::Cat(const Cat& other) : Animal(other) {
     std::cout << "Cat of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 
-Cat::~Cat() : ~Animal() {
+Cat::~Cat() {
     std::cout << "Cat of type\t" << this->_type << " destroyed." << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other) {
-    otherType = other.getType()
+    std::string otherType = other.getType();
     if (this != &other) {
         this->_type = otherType;
     }
@@ -29,6 +29,6 @@ Cat& Cat::operator=(const Cat& other) {
     return *this;
 }
 
-void Cat::makeSound() {
+void Cat::makeSound() const {
     std::cout << "Cat noises..." << std::endl;
 }
