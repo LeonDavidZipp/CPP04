@@ -32,6 +32,9 @@ std::array<std::string, 100> Brain::getIdeas() const {
 }
 
 std::string Brain::getIdea(int index) const {
+    if (index < 0 || index >= 100) {
+        return "Invalid index";
+    }
     return this->_ideas[index];
 }
 
@@ -40,5 +43,8 @@ void Brain::setIdeas(std::array<std::string, 100> ideas) {
 }
 
 void Brain::setIdea(int index, std::string idea) {
+    if (index < 0 || index >= 100) {
+        return;
+    }
     this->_ideas[index] = idea;
 }
