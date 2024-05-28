@@ -29,5 +29,5 @@ std::string Cure::getType() const {
 }
 
 void Cure::use(ICharacter& target) {
-    (void)target;
+    std::cout << "* heals\t" << target->getName() << " wounds *" << std::endl;
 }
