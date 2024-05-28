@@ -28,6 +28,10 @@ std::string Ice::getType() const {
     return this->_type;
 }
 
+Ice* Ice::clone() {
+    return new Ice(this->_type);
+}
+
 void Ice::use(ICharacter& target) {
     std::cout << "* shoots an ice bolt at\t" << target->getName() << " *" << std::endl;
 }

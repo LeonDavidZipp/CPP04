@@ -28,6 +28,10 @@ std::string Cure::getType() const {
     return this->_type;
 }
 
+Cure* Cure::clone() {
+    return new Cure(this->_type);
+}
+
 void Cure::use(ICharacter& target) {
     std::cout << "* heals\t" << target->getName() << "'s wounds *" << std::endl;
 }
