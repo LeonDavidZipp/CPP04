@@ -6,7 +6,7 @@ Cat::Cat() : Animal() {
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 
-Cat::Cat(const std::string& type, const Brain* brain) : Animal(type) {
+Cat::Cat(const std::string& type, Brain* brain) : Animal(type) {
     this->_type = type;
     this->_brain = brain;
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
@@ -34,8 +34,16 @@ Cat& Cat::operator=(const Cat& other) {
     return *this;
 }
 
+std::string Cat::getType() const {
+    return this->_type;
+}
+
 Brain* Cat::getBrain() const {
     return this->_brain;
+}
+
+void Cat::setType(std::string type) {
+    this->_type = type;
 }
 
 void Cat::makeSound() const {

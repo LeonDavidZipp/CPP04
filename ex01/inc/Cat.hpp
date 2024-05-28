@@ -10,13 +10,16 @@
 class Cat : public Animal {
     public:
         Cat();
-        Cat(const std::string& type, const Brain* brain);
+        Cat(const std::string& type, Brain* brain);
         Cat(const Cat& other);
         ~Cat();
 
         Cat& operator=(const Cat& other);
 
+        std::string getType() const;
         Brain* getBrain() const;
+
+        void setType(std::string type);
 
         void makeSound() const;
 
