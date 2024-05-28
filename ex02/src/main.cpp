@@ -41,5 +41,9 @@ int main() {
         std::cout << "-------------------" << std::endl;
     }
 
+    // testing the Animal class
+    // comment this in to make code not compile
+    // Animal animal;
+
     return 0;
 }
