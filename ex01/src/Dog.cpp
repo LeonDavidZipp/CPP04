@@ -6,7 +6,7 @@ Dog::Dog() : Animal() {
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
 }
 
-Dog::Dog(const std::string& type, Brain* brain) : Animal(type) {
+Dog::Dog(const std::string& type, const Brain* brain) : Animal(type) {
     this->_type = type;
     this->_brain = brain;
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;

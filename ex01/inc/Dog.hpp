@@ -10,7 +10,7 @@
 class Dog : public Animal {
     public:
         Dog();
-        Dog(const std::string& type);
+        Dog(const std::string& type, const Brain* brain);
         Dog(const Dog& other);
         ~Dog();
 
