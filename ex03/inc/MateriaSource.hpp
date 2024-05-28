@@ -1,9 +1,9 @@
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 class IMateriaSource
 {
-    virtual ~IMateriaSource() {}
+    virtual ~MateriaSource() {}
     virtual void learnMateria(AMateria*) = 0;
     virtual AMateria* createMateria(std::string const & type) = 0;
 };
