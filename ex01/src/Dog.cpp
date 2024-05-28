@@ -6,7 +6,7 @@ Dog::Dog() : Animal() {
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
 }
 
-Dog::Dog(const std::string& type, const Brain* brain) : Animal(type) {
+Dog::Dog(const std::string& type, Brain* brain) : Animal(type) {
     this->_type = type;
     this->_brain = brain;
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
@@ -34,8 +34,16 @@ Dog& Dog::operator=(const Dog& other) {
     return *this;
 }
 
+std::string Dog::getType() const {
+    return this->_type;
+}
+
 Brain* Dog::getBrain() const {
     return this->_brain;
+}
+
+void Dog::setType(std::string type) {
+    this->_type = type;
 }
 
 void Dog::makeSound() const {
