@@ -6,7 +6,7 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/03 09:34:57 by lzipp             #+#    #+#              #
-#    Updated: 2024/05/27 16:33:08 by lzipp            ###   ########.fr        #
+#    Updated: 2024/05/28 20:49:05 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CPP := c++
 CPPFLAGS := -Wextra -Wall -Werror -std=c++98
 
 SRCDIR := ./src
-SOURCES := $(addprefix $(SRCDIR)/, main.cpp Animal.cpp Dog.cpp Cat.cpp)
+SOURCES := $(addprefix $(SRCDIR)/, main.cpp Animal.cpp Dog.cpp Cat.cpp Wrong.cpp)
 OBJDIR = ./obj
 OBJECTS := $(addprefix $(OBJDIR)/, $(notdir $(SOURCES:.cpp=.o)))
 
