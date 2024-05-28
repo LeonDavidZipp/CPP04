@@ -2,7 +2,10 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
+# include <string>
+# include <array>
 
 class Cat : public Animal {
     public:
@@ -14,6 +17,8 @@ class Cat : public Animal {
         Cat& operator=(const Cat& other);
 
         void makeSound() const;
+
+        Brain* getBrain() const;
 
     protected:
         std::string _type;
