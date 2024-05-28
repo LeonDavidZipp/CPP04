@@ -20,6 +20,11 @@ class Character {
         void equip(AMateria* m) = 0;
         void unequip(int idx) = 0;
         void use(int idx, Character& target);
+
+    private:
+        std::string _name
+        std::array<AMateria*, 4> _weapons;
+        AMateria* _equipped;
 };
 
 #endif
