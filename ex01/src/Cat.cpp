@@ -28,6 +28,7 @@ Cat& Cat::operator=(const Cat& other) {
     std::string otherType = other.getType();
     if (this != &other) {
         this->_type = otherType;
+        delete this->_brain;
         this->_brain = new Brain(*other._brain);
     }
     std::cout << "Cat of type\t" << this->_type << " created from\t" << otherType << std::endl;
@@ -48,4 +49,13 @@ void Cat::setType(std::string type) {
 
 void Cat::makeSound() const {
     std::cout << "Cat noises..." << std::endl;
+}
+
+void Cat::compareTo(const Cat& other) const
+{
+	std::cout << "Now comparing two cats\n";
+    std::cout << "My heap address: " << this << std::endl;
+    std::cout << "Other heap address: " << &other << std::endl;
+	std::cout << "My brain's heap address: " << static_cast<void*>(this->getBrain()) << std::endl;
+	std::cout << "Other's heap address: " << static_cast<void*>(other.getBrain()) << std::endl;
 }

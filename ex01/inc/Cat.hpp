@@ -23,6 +23,8 @@ class Cat : public Animal {
 
         void makeSound() const;
 
+        void compareTo(const Cat& other) const;
+
     protected:
         std::string _type;
 

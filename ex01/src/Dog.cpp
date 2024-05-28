@@ -49,3 +49,12 @@ void Dog::setType(std::string type) {
 void Dog::makeSound() const {
     std::cout << "Dog noises..." << std::endl;
 }
+
+void Dog::compareTo(const Dog& other) const
+{
+	std::cout << "Now comparing two dogs\n";
+    std::cout << "My heap address: " << this << std::endl;
+    std::cout << "Other heap address: " << &other << std::endl;
+	std::cout << "My brain's heap address: " << static_cast<void*>(this->getBrain()) << std::endl;
+	std::cout << "Other brain's heap address: " << static_cast<void*>(other.getBrain()) << std::endl;
+}
