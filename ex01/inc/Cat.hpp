@@ -16,9 +16,9 @@ class Cat : public Animal {
 
         Cat& operator=(const Cat& other);
 
-        void makeSound() const;
-
         Brain* getBrain() const;
+
+        void makeSound() const;
 
     protected:
         std::string _type;
