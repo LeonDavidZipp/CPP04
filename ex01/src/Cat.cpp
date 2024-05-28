@@ -6,9 +6,9 @@ Cat::Cat() : Animal() {
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 
-Cat::Cat(const std::string& type) : Animal(type) {
+Cat::Cat(const std::string& type, const Brain* brain) : Animal(type) {
     this->_type = type;
-    this->_brain = new Brain();
+    this->_brain = brain;
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 

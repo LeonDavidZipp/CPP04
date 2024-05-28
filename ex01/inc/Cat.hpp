@@ -10,7 +10,7 @@
 class Cat : public Animal {
     public:
         Cat();
-        Cat(const std::string& type);
+        Cat(const std::string& type, const Brain* brain);
         Cat(const Cat& other);
         ~Cat();
 
