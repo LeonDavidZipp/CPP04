@@ -2,7 +2,10 @@
 # define DOG_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
+# include <string>
+# include <array>
 
 class Dog : public Animal {
     public:
@@ -12,6 +15,8 @@ class Dog : public Animal {
         ~Dog();
 
         Dog& operator=(const Dog& other);
+
+        Brain* getBrain() const;
 
         void makeSound() const;
 
