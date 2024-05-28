@@ -2,6 +2,7 @@
 # define CURE_HPP
 
 # include "AMateria.hpp"
+# include <iostream>
 
 class Cure : virtual public AMateria {
     public:

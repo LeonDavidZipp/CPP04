@@ -2,7 +2,8 @@
 # define CHARACTER_HPP
 
 # include "ICharacter.hpp"
-# include "IMateria.hpp"
+# include "AMateria.hpp"
+# include <iostream>
 
 class Character : virtual public ICharacter {
     public:

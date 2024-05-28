@@ -2,6 +2,7 @@
 # define ICE_HPP
 
 # include "AMateria.hpp"
+# include <iostream>
 
 class Ice : virtual public AMateria{
     public:
