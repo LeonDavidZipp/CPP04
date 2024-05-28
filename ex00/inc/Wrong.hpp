@@ -1,6 +1,8 @@
 #ifndef WRONG_HPP
 # define WRONG_HPP
 
+# include <iostream>
+
 class WrongAnimal {
     public:
         WrongAnimal();
@@ -19,7 +21,7 @@ class WrongAnimal {
         std::string _type;
 };
 
-class WrongCat : public WrongAnimal {
+class WrongCat : virtual public WrongAnimal {
     public:
         WrongCat();
         WrongCat(const std::string& type);

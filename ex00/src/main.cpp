@@ -7,7 +7,7 @@ int main() {
     const Animal* meta = new Animal();
     const Animal* dog = new Dog();
     const Animal* cat = new Cat();
-    const Animal* wrongCat = new WrongCat();
+    const WrongAnimal* wrongCat = new WrongCat();
 
     std::cout << dog->getType() << " " << std::endl;
     std::cout << cat->getType() << " " << std::endl;

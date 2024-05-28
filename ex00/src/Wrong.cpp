@@ -43,6 +43,7 @@ void WrongAnimal::makeSound() const {
     std::cout << "WrongAnimal noises..." << std::endl;
 }
 
+
 WrongCat::WrongCat() : WrongAnimal() {
     this->_type = "Default WrongCat";
     std::cout << "WrongCat of type\t" << this->_type << " created" << std::endl;
