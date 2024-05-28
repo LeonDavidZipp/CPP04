@@ -41,11 +41,17 @@ void Character::setName(std::string name) {
     this->name = name;
 }
 void Character::equip(AMateria* m) {
-
+    if (!m) {
+        return ;
+    }
 }
 void Character::unequip(int idx) {
-
+    if (!m) {
+        return ;
+    }
 }
 void Character::use(int idx, Character& target) {
-
+if (!m) {
+    return ;
+}
 }

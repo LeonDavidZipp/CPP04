@@ -1,9 +1,10 @@
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
+# include "ICharacter.hpp"
 # include "IMateria.hpp"
 
-class Character {
+class Character : virtual public ICharacter {
     public:
         Character();
         Chracter(const std::string name)

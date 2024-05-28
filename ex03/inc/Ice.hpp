@@ -3,7 +3,7 @@
 
 # include "AMateria.hpp"
 
-class Ice {
+class Ice : virtual public AMateria{
     public:
         Ice();
         Ice(const Ice& other);
