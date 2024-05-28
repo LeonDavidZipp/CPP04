@@ -1,5 +1,5 @@
 
-NAME := ex01Test
+NAME := ex02Test
 
 CPP := c++
 CPPFLAGS := -Wextra -Wall -Werror -std=c++98
