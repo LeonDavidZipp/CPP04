@@ -1,12 +1,7 @@
 #include "../inc/Animal.hpp"
 
 Animal::Animal() {
-    this->_type = "Default Animal";
-    std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
-}
-
-Animal::Animal(const std::string& type) {
-    this->_type = type;
+    this->_type = "Animal";
     std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
 

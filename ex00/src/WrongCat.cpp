@@ -1,18 +1,12 @@
 #include "../inc/WrongCat.hpp"
 
 WrongCat::WrongCat() : WrongAnimal() {
-    this->_type = "Default WrongCat";
+    this->_type = "WrongCat";
     std::cout << "WrongCat of type\t" << this->_type << " created" << std::endl;
 }
 
-WrongCat::WrongCat(const std::string& type) : WrongAnimal(type) {
-    this->_type = type;
-    std::cout << "WrongCat of type\t" << this->_type << " created" << std::endl;
-}
-
-WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other) {
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal() {
     std::string otherType = other.getType();
-    this->_type = otherType;
     std::cout << "WrongCat of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 

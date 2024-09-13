@@ -5,11 +5,6 @@ WrongAnimal::WrongAnimal() {
     std::cout << "WrongAnimal of type\t" << this->_type << " created" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const std::string& type) {
-    this->_type = type;
-    std::cout << "WrongAnimal of type\t" << this->_type << " created" << std::endl;
-}
-
 WrongAnimal::WrongAnimal(const WrongAnimal& other) {
     std::string otherType = other.getType();
     this->_type = otherType;
