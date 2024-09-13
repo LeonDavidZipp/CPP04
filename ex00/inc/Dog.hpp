@@ -1,10 +1,10 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include <iostream>
 
-class Dog : public Animal {
+class Dog : public AAnimal {
     public:
         Dog();
         Dog(const Dog& other);

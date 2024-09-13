@@ -1,10 +1,10 @@
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 
-# include "WrongAnimal.hpp"
+# include "WrongAAnimal.hpp"
 # include <iostream>
 
-class WrongCat : public WrongAnimal {
+class WrongCat : public WrongAAnimal {
     public:
         WrongCat();
         WrongCat(const WrongCat& other);

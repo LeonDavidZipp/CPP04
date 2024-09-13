@@ -3,13 +3,13 @@
 
 # include <iostream>
 
-class WrongAnimal {
+class WrongAAnimal {
     public:
-        WrongAnimal();
-        WrongAnimal(const WrongAnimal& other);
-        ~WrongAnimal();
+        WrongAAnimal();
+        WrongAAnimal(const WrongAAnimal& other);
+        ~WrongAAnimal();
 
-        WrongAnimal& operator=(const WrongAnimal& other);
+        WrongAAnimal& operator=(const WrongAAnimal& other);
 
         std::string getType() const;
         void setType(std::string type);

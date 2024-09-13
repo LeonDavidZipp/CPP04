@@ -2,10 +2,10 @@
 NAME := ex01Test
 
 CPP := c++
-CPPFLAGS := -Wextra -Wall -Werror -std=c++98
+CPPFLAGS := -Wextra -Wall -Werror -std=c++11
 
 SRCDIR := ./src
-SOURCES := $(addprefix $(SRCDIR)/, main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp)
+SOURCES := $(addprefix $(SRCDIR)/, main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp)
 OBJDIR = ./obj
 OBJECTS := $(addprefix $(OBJDIR)/, $(notdir $(SOURCES:.cpp=.o)))
 

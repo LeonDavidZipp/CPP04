@@ -1,18 +1,18 @@
 #include "../inc/Cat.hpp"
 
-Cat::Cat() : Animal() {
+Cat::Cat() : AAnimal() {
     this->_type = "Default Cat";
     this->_brain = new Brain();
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 
-Cat::Cat(const std::string& type, Brain* brain) : Animal(type) {
+Cat::Cat(const std::string& type, Brain* brain) : AAnimal(type) {
     this->_type = type;
     this->_brain = brain;
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 
-Cat::Cat(const Cat& other) : Animal(other) {
+Cat::Cat(const Cat& other) : AAnimal(other) {
     std::string otherType = other.getType();
     this->_type = otherType;
     this->_brain = new Brain(*other._brain);
@@ -54,8 +54,8 @@ void Cat::makeSound() const {
 void Cat::compareTo(const Cat& other) const
 {
 	std::cout << "Now comparing two cats\n";
-    std::cout << "My heap address: " << this << std::endl;
-    std::cout << "Other heap address: " << &other << std::endl;
-	std::cout << "My brain's heap address: " << static_cast<void*>(this->getBrain()) << std::endl;
-	std::cout << "Other's heap address: " << static_cast<void*>(other.getBrain()) << std::endl;
+    std::cout << "My heap address:\t\t" << this << std::endl;
+    std::cout << "Other heap address:\t\t" << &other << std::endl;
+	std::cout << "My brain's heap address:\t" << static_cast<void*>(this->getBrain()) << std::endl;
+	std::cout << "Other's heap address:\t" << static_cast<void*>(other.getBrain()) << std::endl;
 }

@@ -1,5 +1,6 @@
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
+#include <array>
 
 int main() {
     // idea array
@@ -10,7 +11,7 @@ int main() {
 
     // filling the array with animals
     const int len = 6;
-    std::array<Animal*, len> animals;
+    std::array<AAnimal*, len> animals;
     animals[0] = new Cat();
     animals[1] = new Cat("Persian", new Brain(ideas));
     animals[2] = new Cat(*(static_cast<Cat*>(animals[1])));
@@ -28,8 +29,10 @@ int main() {
 
     //testing deepcopies
     std::cout << std::endl;
+	static_cast<Cat*>(animals[0])->compareTo(*(static_cast<Cat*>(animals[1])));
     static_cast<Cat*>(animals[1])->compareTo(*(static_cast<Cat*>(animals[2])));
     std::cout << "-------------------" << std::endl;
+	static_cast<Dog*>(animals[3])->compareTo(*(static_cast<Dog*>(animals[4])));
     static_cast<Dog*>(animals[4])->compareTo(*(static_cast<Dog*>(animals[5])));
     std::cout << "-------------------" << std::endl;
 

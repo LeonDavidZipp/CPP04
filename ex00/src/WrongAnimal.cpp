@@ -1,39 +1,39 @@
-#include "../inc/WrongAnimal.hpp"
+#include "../inc/WrongAAnimal.hpp"
 
-WrongAnimal::WrongAnimal() {
-    this->_type = "Default WrongAnimal";
-    std::cout << "WrongAnimal of type\t" << this->_type << " created" << std::endl;
+WrongAAnimal::WrongAAnimal() {
+    this->_type = "Default WrongAAnimal";
+    std::cout << "WrongAAnimal of type\t" << this->_type << " created" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal& other) {
+WrongAAnimal::WrongAAnimal(const WrongAAnimal& other) {
     std::string otherType = other.getType();
     this->_type = otherType;
-    std::cout << "WrongAnimal of type\t" << this->_type << " created from\t" << otherType << std::endl;
+    std::cout << "WrongAAnimal of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 
-WrongAnimal::~WrongAnimal() {
-    std::cout << "WrongAnimal of type\t" << this->_type << " destroyed." << std::endl;
+WrongAAnimal::~WrongAAnimal() {
+    std::cout << "WrongAAnimal of type\t" << this->_type << " destroyed." << std::endl;
 }
 
-WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
+WrongAAnimal& WrongAAnimal::operator=(const WrongAAnimal& other) {
     std::string otherType = other.getType();
 
     if (this != &other) {
         this->_type = otherType;
     }
 
-    std::cout << "WrongAnimal of type\t" << this->_type << " created from\t" << otherType << std::endl;
+    std::cout << "WrongAAnimal of type\t" << this->_type << " created from\t" << otherType << std::endl;
     return *this;
 }
 
-std::string WrongAnimal::getType() const {
+std::string WrongAAnimal::getType() const {
     return this->_type;
 }
 
-void WrongAnimal::setType(std::string type) {
+void WrongAAnimal::setType(std::string type) {
     this->_type = type;
 }
 
-void WrongAnimal::makeSound() const {
-    std::cout << "WrongAnimal noises..." << std::endl;
+void WrongAAnimal::makeSound() const {
+    std::cout << "WrongAAnimal noises..." << std::endl;
 }

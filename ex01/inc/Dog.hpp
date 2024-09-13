@@ -1,13 +1,13 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 # include <iostream>
 # include <string>
 # include <array>
 
-class Dog : public Animal {
+class Dog : public AAnimal {
     public:
         Dog();
         Dog(const std::string& type, Brain* brain);
