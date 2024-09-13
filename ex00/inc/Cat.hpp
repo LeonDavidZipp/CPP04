@@ -13,7 +13,7 @@ class Cat : public Animal {
 
         Cat& operator=(const Cat& other);
 
-        void makeSound() const;
+        void makeSound() const override;
 
     protected:
         std::string _type;

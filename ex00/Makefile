@@ -6,14 +6,14 @@
 #    By: lzipp <lzipp@student.42heilbronn.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/03 09:34:57 by lzipp             #+#    #+#              #
-#    Updated: 2024/05/27 16:33:08 by lzipp            ###   ########.fr        #
+#    Updated: 2024/09/11 11:35:11 by lzipp            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := ex00Test
 
 CPP := c++
-CPPFLAGS := -Wextra -Wall -Werror -std=c++98
+CPPFLAGS := -Wextra -Wall -Werror -std=c++11
 
 SRCDIR := ./src
 SOURCES := $(addprefix $(SRCDIR)/, main.cpp Animal.cpp Dog.cpp Cat.cpp)
