@@ -3,6 +3,9 @@
 #include <array>
 
 int main() {
+	// comment in for compile error:
+	// const AAnimal* a = new AAnimal();
+
     // idea array
     std::array<std::string, 100> ideas;
     for (int i = 0; i < 100; i++) {

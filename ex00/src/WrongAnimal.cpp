@@ -1,7 +1,7 @@
 #include "../inc/WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() {
-    this->_type = "Default WrongAnimal";
+    this->_type = "WrongAnimal";
     std::cout << "WrongAnimal of type\t" << this->_type << " created" << std::endl;
 }
 

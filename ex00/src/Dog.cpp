@@ -6,7 +6,8 @@ Dog::Dog() : Animal() {
 }
 
 Dog::Dog(const Dog& other) : Animal() {
-    std::string otherType = other.getType();
+    std::string otherType = other._type;
+	this->_type = otherType;
     std::cout << "Dog of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 

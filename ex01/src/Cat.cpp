@@ -1,7 +1,7 @@
 #include "../inc/Cat.hpp"
 
 Cat::Cat() : Animal() {
-    this->_type = "Default Cat";
+    this->_type = "Cat";
     this->_brain = new Brain();
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }

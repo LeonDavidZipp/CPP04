@@ -1,7 +1,7 @@
 #include "../inc/Dog.hpp"
 
 Dog::Dog() : Animal() {
-    this->_type = "Default Dog";
+    this->_type = "Dog";
     this->_brain = new Brain();
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
 }

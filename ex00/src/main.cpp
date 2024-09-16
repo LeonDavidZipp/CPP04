@@ -7,12 +7,12 @@
 int main() {
     std::cout << "default constructors pointer -------------------------------" << std::endl;
     const Animal* meta = new Animal();
-    const Dog* dog = new Dog();
-    const Cat* cat = new Cat();
+    const Animal* dog = new Dog();
+    const Animal* cat = new Cat();
 
-    std::cout << meta->getType() << " " << std::endl;
-    std::cout << dog->getType() << " " << std::endl;
-    std::cout << cat->getType() << " " << std::endl;
+    std::cout << "type: " << meta->getType() << " " << std::endl;
+    std::cout << "type: " << dog->getType() << " " << std::endl;
+    std::cout << "type: " << cat->getType() << " " << std::endl;
 
     meta->makeSound();
     cat->makeSound();
@@ -57,7 +57,7 @@ int main() {
     const Animal dog3 = dog1;
     const Animal cat3 = cat1;
 
-    std::cout << "type: " << dog3.getType() << " " << std::endl;
+    std::cout << "type: " << meta3.getType() << " " << std::endl;
     std::cout << "type: " << dog3.getType() << " " << std::endl;
     std::cout << "type: " << cat3.getType() << " " << std::endl;
 
@@ -70,7 +70,7 @@ int main() {
 
     std::cout << "default constructors pointer -------------------------------" << std::endl;
     const WrongAnimal* wrongMeta = new WrongAnimal();
-    const WrongCat* wrongCat = new WrongCat();
+    const WrongAnimal* wrongCat = new WrongCat();
 
     std::cout << wrongMeta->getType() << " " << std::endl;
     std::cout << wrongCat->getType() << " " << std::endl;
@@ -83,7 +83,6 @@ int main() {
 
     std::cout << std::endl;
     std::cout << "default constructors -------------------------------" << std::endl;
-
     const WrongAnimal wrongMeta1 = WrongAnimal();
     const WrongAnimal wrongCat1 = WrongCat();
 
@@ -96,8 +95,8 @@ int main() {
     std::cout << std::endl;
 
     std::cout << "copy constructors -------------------------------" << std::endl;
-    const WrongAnimal wrongMeta2 = wrongMeta1;
-    const WrongAnimal wrongCat2 = wrongCat1;
+    const WrongAnimal wrongMeta2(wrongMeta1);
+    const WrongAnimal wrongCat2(wrongCat1);
 
     std::cout << "type: " << wrongCat2.getType() << " " << std::endl;
 
@@ -114,15 +113,7 @@ int main() {
     wrongMeta3.makeSound();
     wrongCat3.makeSound();
 
-    std::cout << std::endl;
-
-	const WrongAnimal wrongMeta4 = wrongMeta1;
-    const WrongAnimal wrongCat4 = wrongCat1;
-
-    std::cout << "type: " << wrongCat3.getType() << " " << std::endl;
-
-    wrongMeta4.makeSound();
-    wrongCat4.makeSound();
+	std::cout << std::endl;
 
     return 0;
 }
