@@ -1,18 +1,18 @@
 #include "../inc/Dog.hpp"
 
-Dog::Dog() : AAnimal() {
+Dog::Dog() : Animal() {
     this->_type = "Default Dog";
     this->_brain = new Brain();
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
 }
 
-Dog::Dog(const std::string& type, Brain* brain) : AAnimal(type) {
+Dog::Dog(const std::string& type, Brain* brain) : Animal(type) {
     this->_type = type;
     this->_brain = brain;
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
 }
 
-Dog::Dog(const Dog& other) : AAnimal(other) {
+Dog::Dog(const Dog& other) : Animal(other) {
     std::string otherType = other.getType();
     this->_type = otherType;
     this->_brain = new Brain(*other._brain);

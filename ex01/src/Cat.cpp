@@ -1,18 +1,18 @@
 #include "../inc/Cat.hpp"
 
-Cat::Cat() : AAnimal() {
+Cat::Cat() : Animal() {
     this->_type = "Default Cat";
     this->_brain = new Brain();
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 
-Cat::Cat(const std::string& type, Brain* brain) : AAnimal(type) {
+Cat::Cat(const std::string& type, Brain* brain) : Animal(type) {
     this->_type = type;
     this->_brain = brain;
     std::cout << "Cat of type\t" << this->_type << " created" << std::endl;
 }
 
-Cat::Cat(const Cat& other) : AAnimal(other) {
+Cat::Cat(const Cat& other) : Animal(other) {
     std::string otherType = other.getType();
     this->_type = otherType;
     this->_brain = new Brain(*other._brain);

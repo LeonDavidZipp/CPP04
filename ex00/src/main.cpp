@@ -1,12 +1,12 @@
-#include "../inc/AAnimal.hpp"
+#include "../inc/Animal.hpp"
 #include "../inc/Cat.hpp"
 #include "../inc/Dog.hpp"
-#include "../inc/WrongAAnimal.hpp"
+#include "../inc/WrongAnimal.hpp"
 #include "../inc/WrongCat.hpp"
 
 int main() {
     std::cout << "default constructors pointer -------------------------------" << std::endl;
-    const AAnimal* meta = new AAnimal();
+    const Animal* meta = new Animal();
     const Dog* dog = new Dog();
     const Cat* cat = new Cat();
 
@@ -25,7 +25,7 @@ int main() {
     std::cout << std::endl;
     std::cout << "default constructors -------------------------------" << std::endl;
 
-    const AAnimal meta1 = AAnimal();
+    const Animal meta1 = Animal();
     const Dog dog1 = Dog();
     const Cat cat1 = Cat();
 
@@ -40,7 +40,7 @@ int main() {
     std::cout << std::endl;
 
     std::cout << "copy constructors -------------------------------" << std::endl;
-    const AAnimal meta2 = meta1;
+    const Animal meta2 = meta1;
     const Dog dog2 = dog1;
     const Cat cat2 = cat1;
 
@@ -53,9 +53,9 @@ int main() {
 
     std::cout << std::endl;
     std::cout << "assignment operators -------------------------------" << std::endl;
-    const AAnimal meta3 = meta1;
-    const AAnimal dog3 = dog1;
-    const AAnimal cat3 = cat1;
+    const Animal meta3 = meta1;
+    const Animal dog3 = dog1;
+    const Animal cat3 = cat1;
 
     std::cout << "type: " << dog3.getType() << " " << std::endl;
     std::cout << "type: " << dog3.getType() << " " << std::endl;
@@ -69,7 +69,7 @@ int main() {
     std::cout << "wrong animals below ---------------------------------" << std::endl;
 
     std::cout << "default constructors pointer -------------------------------" << std::endl;
-    const WrongAAnimal* wrongMeta = new WrongAAnimal();
+    const WrongAnimal* wrongMeta = new WrongAnimal();
     const WrongCat* wrongCat = new WrongCat();
 
     std::cout << wrongMeta->getType() << " " << std::endl;
@@ -84,8 +84,8 @@ int main() {
     std::cout << std::endl;
     std::cout << "default constructors -------------------------------" << std::endl;
 
-    const WrongAAnimal wrongMeta1 = WrongAAnimal();
-    const WrongAAnimal wrongCat1 = WrongCat();
+    const WrongAnimal wrongMeta1 = WrongAnimal();
+    const WrongAnimal wrongCat1 = WrongCat();
 
     std::cout << "type: " << wrongMeta1.getType() << " " << std::endl;
     std::cout << "type: " << wrongCat1.getType() << " " << std::endl;
@@ -96,8 +96,8 @@ int main() {
     std::cout << std::endl;
 
     std::cout << "copy constructors -------------------------------" << std::endl;
-    const WrongAAnimal wrongMeta2 = wrongMeta1;
-    const WrongAAnimal wrongCat2 = wrongCat1;
+    const WrongAnimal wrongMeta2 = wrongMeta1;
+    const WrongAnimal wrongCat2 = wrongCat1;
 
     std::cout << "type: " << wrongCat2.getType() << " " << std::endl;
 
@@ -106,8 +106,8 @@ int main() {
 
     std::cout << std::endl;
     std::cout << "assignment operators -------------------------------" << std::endl;
-    const WrongAAnimal wrongMeta3 = wrongMeta1;
-    const WrongAAnimal wrongCat3 = wrongCat1;
+    const WrongAnimal wrongMeta3 = wrongMeta1;
+    const WrongAnimal wrongCat3 = wrongCat1;
 
     std::cout << "type: " << wrongCat3.getType() << " " << std::endl;
 
@@ -116,8 +116,8 @@ int main() {
 
     std::cout << std::endl;
 
-	const WrongAAnimal wrongMeta4 = wrongMeta1;
-    const WrongAAnimal wrongCat4 = wrongCat1;
+	const WrongAnimal wrongMeta4 = wrongMeta1;
+    const WrongAnimal wrongCat4 = wrongCat1;
 
     std::cout << "type: " << wrongCat3.getType() << " " << std::endl;
 

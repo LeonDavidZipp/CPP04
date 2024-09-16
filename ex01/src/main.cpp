@@ -11,7 +11,7 @@ int main() {
 
     // filling the array with animals
     const int len = 6;
-    std::array<AAnimal*, len> animals;
+    std::array<Animal*, len> animals;
     animals[0] = new Cat();
     animals[1] = new Cat("Persian", new Brain(ideas));
     animals[2] = new Cat(*(static_cast<Cat*>(animals[1])));
@@ -43,6 +43,12 @@ int main() {
         delete animals[i];
         std::cout << "-------------------" << std::endl;
     }
+
+	Dog dog = Dog();
+	{
+		Dog dog2(dog);
+	}
+	dog.getBrain();
 
     return 0;
 }

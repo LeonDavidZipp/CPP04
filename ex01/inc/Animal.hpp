@@ -3,14 +3,14 @@
 
 # include <iostream>
 
-class AAnimal {
+class Animal {
     public:
-        AAnimal();
-        AAnimal(const std::string& type);
-        AAnimal(const AAnimal& other);
-        virtual ~AAnimal();
+        Animal();
+        Animal(const std::string& type);
+        Animal(const Animal& other);
+        virtual ~Animal();
 
-        AAnimal& operator=(const AAnimal& other);
+        Animal& operator=(const Animal& other);
 
         virtual std::string getType() const;
         void setType(std::string type);

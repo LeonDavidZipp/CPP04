@@ -1,11 +1,11 @@
 #include "../inc/Dog.hpp"
 
-Dog::Dog() : AAnimal() {
+Dog::Dog() : Animal() {
     this->_type = "Dog";
     std::cout << "Dog of type\t" << this->_type << " created" << std::endl;
 }
 
-Dog::Dog(const Dog& other) : AAnimal() {
+Dog::Dog(const Dog& other) : Animal() {
     std::string otherType = other.getType();
     std::cout << "Dog of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }

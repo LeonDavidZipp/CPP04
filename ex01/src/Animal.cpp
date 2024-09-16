@@ -1,44 +1,44 @@
-#include "../inc/AAnimal.hpp"
+#include "../inc/Animal.hpp"
 
-AAnimal::AAnimal() {
-    this->_type = "Default AAnimal";
-    std::cout << "AAnimal of type\t" << this->_type << " created" << std::endl;
+Animal::Animal() {
+    this->_type = "Default Animal";
+    std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
 
-AAnimal::AAnimal(const std::string& type) {
+Animal::Animal(const std::string& type) {
     this->_type = type;
-    std::cout << "AAnimal of type\t" << this->_type << " created" << std::endl;
+    std::cout << "Animal of type\t" << this->_type << " created" << std::endl;
 }
 
-AAnimal::AAnimal(const AAnimal& other) {
+Animal::Animal(const Animal& other) {
     std::string otherType = other.getType();
     this->_type = otherType;
-    std::cout << "AAnimal of type\t" << this->_type << " created from\t" << otherType << std::endl;
+    std::cout << "Animal of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 
-AAnimal::~AAnimal() {
-    std::cout << "AAnimal of type\t" << this->_type << " destroyed." << std::endl;
+Animal::~Animal() {
+    std::cout << "Animal of type\t" << this->_type << " destroyed." << std::endl;
 }
 
-AAnimal& AAnimal::operator=(const AAnimal& other) {
+Animal& Animal::operator=(const Animal& other) {
     std::string otherType = other.getType();
 
     if (this != &other) {
         this->_type = otherType;
     }
 
-    std::cout << "AAnimal of type\t" << this->_type << " created from\t" << otherType << std::endl;
+    std::cout << "Animal of type\t" << this->_type << " created from\t" << otherType << std::endl;
     return *this;
 }
 
-std::string AAnimal::getType() const {
+std::string Animal::getType() const {
     return this->_type;
 }
 
-void AAnimal::setType(std::string type) {
+void Animal::setType(std::string type) {
     this->_type = type;
 }
 
-void AAnimal::makeSound() const {
-    std::cout << "AAnimal noises..." << std::endl;
+void Animal::makeSound() const {
+    std::cout << "Animal noises..." << std::endl;
 }

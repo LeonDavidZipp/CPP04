@@ -1,10 +1,10 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "AAnimal.hpp"
+# include "Animal.hpp"
 # include <iostream>
 
-class Cat : public AAnimal {
+class Cat : public Animal {
     public:
         Cat();
         Cat(const Cat& other);

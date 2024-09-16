@@ -1,13 +1,13 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "AAnimal.hpp"
+# include "Animal.hpp"
 # include "Brain.hpp"
 # include <iostream>
 # include <string>
 # include <array>
 
-class Cat : public AAnimal {
+class Cat : public Animal {
     public:
         Cat();
         Cat(const std::string& type, Brain* brain);
