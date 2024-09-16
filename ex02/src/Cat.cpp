@@ -57,5 +57,5 @@ void Cat::compareTo(const Cat& other) const
     std::cout << "My heap address:\t\t" << this << std::endl;
     std::cout << "Other heap address:\t\t" << &other << std::endl;
 	std::cout << "My brain's heap address:\t" << static_cast<void*>(this->getBrain()) << std::endl;
-	std::cout << "Other's heap address:\t" << static_cast<void*>(other.getBrain()) << std::endl;
+	std::cout << "Other brain's heap address:\t" << static_cast<void*>(other.getBrain()) << std::endl;
 }
