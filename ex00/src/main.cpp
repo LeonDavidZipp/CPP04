@@ -44,7 +44,7 @@ int main() {
     const Dog dog2 = dog1;
     const Cat cat2 = cat1;
 
-    std::cout << "type: " << dog2.getType() << " " << std::endl;
+    std::cout << "type: " << meta2.getType() << " " << std::endl;
     std::cout << "type: " << dog2.getType() << " " << std::endl;
     std::cout << "type: " << cat2.getType() << " " << std::endl;
 
