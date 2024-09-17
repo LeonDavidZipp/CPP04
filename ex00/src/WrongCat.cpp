@@ -1,12 +1,13 @@
 #include "../inc/WrongCat.hpp"
 
 WrongCat::WrongCat() : WrongAnimal() {
-    this->_type = "WrongCat";
+    setType("WrongCat");
     std::cout << "WrongCat of type\t" << this->_type << " created" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& other) : WrongAnimal() {
     std::string otherType = other.getType();
+	setType(otherType);
     std::cout << "WrongCat of type\t" << this->_type << " created from\t" << otherType << std::endl;
 }
 
@@ -16,6 +17,7 @@ WrongCat::~WrongCat() {
 
 WrongCat& WrongCat::operator=(const WrongCat& other) {
     std::string otherType = other.getType();
+	std::cout << std::endl << "assignment operator type: " << otherType << std::endl << std::endl;
     if (this != &other) {
         this->_type = otherType;
     }
