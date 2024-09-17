@@ -2,10 +2,11 @@
 # define CHARACTER_HPP
 
 # include <iostream>
+# include <array>
 # include "ICharacter.hpp"
 # include "AMateria.hpp"
 
-class Character
+class Character : public ICharacter
 {
 	public:
 		Character();
@@ -21,7 +22,8 @@ class Character
 
 	private:
 		std::string _name;
-		AMateria* _materias[4];
+		std::array<AMateria *, 4> _materias;
+		std::array<AMateria *, 1000> _dropped;
 };
 
 #endif
